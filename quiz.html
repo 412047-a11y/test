@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《筆下的你》｜精青</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<main class="quiz-shell">
+  <header class="quiz-header">
+    <a class="back-link" href="../index.html">精青</a>
+    <div class="ink-progress"><span id="progressInk"></span></div>
+    <span id="progressText">01 / 12</span>
+  </header>
+
+  <section id="intro" class="intro view">
+    <p class="eyebrow">測測看小遊戲</p>
+    <h1>筆下的你</h1>
+    <p class="lead">如果把你的感情觀寫成一篇文章，你會是哪一位文人？</p>
+    <p class="intro-copy">接下來，你會遇到十二個沒有標準答案的日常情境。沒有哪個選項比較正確，也不需要猜哪個答案對應哪位文人。只要選最接近現在的你。</p>
+    <button id="startBtn" class="primary-btn">翻開第一頁</button>
+  </section>
+
+  <section id="questionView" class="question-view view hidden">
+    <p id="questionNo" class="eyebrow">第一頁</p>
+    <h2 id="questionTitle"></h2>
+    <p id="questionText" class="question-text"></p>
+    <div id="options" class="options"></div>
+  </section>
+
+  <section id="analysisView" class="analysis view hidden">
+    <div class="analysis-mark">✦</div>
+    <p id="analysisLine">正在整理你的答案……</p>
+  </section>
+</main>
+<script src="quiz-data.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>

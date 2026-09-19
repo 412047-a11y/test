@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600&display=swap');
+:root{--paper:#fcf9f2;--ink:#1a1a1a;--muted:#746f66;--line:#d9d0c1;--accent:#1b3b2b;--accent-soft:#e9eee9}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink)}
+body{font-family:"Noto Sans TC",sans-serif}
+.quiz-shell{min-height:100vh;max-width:1040px;margin:auto;padding:26px 34px 60px;display:flex;flex-direction:column}
+.quiz-header{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--muted)}
+.back-link{color:var(--ink);text-decoration:none;font-family:"Noto Serif TC",serif;font-weight:600}
+.ink-progress{height:2px;background:var(--line);flex:1;position:relative;overflow:hidden}.ink-progress span{display:block;height:100%;width:8%;background:var(--accent);transition:width .45s ease}
+.view{min-height:calc(100vh - 110px);display:flex;flex-direction:column;justify-content:center}
+.hidden{display:none!important}
+.intro{max-width:720px;margin:auto;text-align:center;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;color:var(--muted);font-size:12px;margin:0 0 22px}
+h1,h2{font-family:"Noto Serif TC",serif;font-weight:500;line-height:1.25}
+h1{font-size:clamp(52px,9vw,92px);margin:0 0 18px;letter-spacing:.08em}
+.lead{font-family:"Noto Serif TC",serif;font-size:clamp(20px,3vw,30px);line-height:1.65;margin:0 0 26px}
+.intro-copy{max-width:610px;color:var(--muted);line-height:2;margin:0 auto 40px}
+.primary-btn{border:1px solid var(--ink);background:var(--ink);color:white;padding:14px 28px;border-radius:999px;font:inherit;cursor:pointer;transition:.25s}.primary-btn:hover{transform:translateY(-2px);background:var(--accent)}
+.question-view{max-width:800px;width:100%;margin:auto}
+.question-view h2{font-size:clamp(30px,5vw,52px);margin:0 0 18px}
+.question-text{font-family:"Noto Serif TC",serif;font-size:clamp(19px,2.5vw,25px);line-height:1.9;margin:0 0 42px}
+.options{display:grid;gap:12px}
+.option{display:grid;grid-template-columns:38px 1fr;align-items:center;text-align:left;border:1px solid var(--line);background:transparent;padding:18px 20px;border-radius:10px;font:inherit;color:var(--ink);cursor:pointer;transition:background .2s,border-color .2s,transform .2s}.option:hover{background:var(--accent-soft);border-color:var(--accent);transform:translateX(4px)}
+.option-letter{font-family:"Noto Serif TC",serif;font-size:20px;color:var(--accent)}
+.analysis{align-items:center;text-align:center}.analysis-mark{font-size:34px;color:var(--accent);animation:pulse 1.2s infinite}.analysis p{font-family:"Noto Serif TC",serif;font-size:25px;margin-top:20px;transition:opacity .3s}
+@keyframes pulse{50%{opacity:.25;transform:scale(.9)}}@media(max-width:600px){.quiz-shell{padding:20px}.view{min-height:calc(100vh - 90px)}.intro-copy{line-height:1.9}.option{padding:16px}.question-text{margin-bottom:30px}}
