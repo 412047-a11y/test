@@ -1,7 +1,7 @@
 (() => {
   const D=window.BXN_DATA;
   const raw=sessionStorage.getItem("bxn_result");
-  if(!raw){location.href="quiz.html";return;}
+  if(!raw){location.href="index.html";return;}
   const state=JSON.parse(raw);
   const dims=D.dimensions;
 
@@ -50,7 +50,7 @@
   const works=document.querySelector("#works");works.className="works";
   D.writers[quoteId].works.forEach(w=>{const s=document.createElement("span");s.className="tag";s.textContent=w;works.appendChild(s);});
 
-  document.querySelector("#againBtn").onclick=()=>{sessionStorage.removeItem("bxn_result");location.href="quiz.html";};
+  document.querySelector("#againBtn").onclick=()=>{sessionStorage.removeItem("bxn_result");location.href="index.html";};
   document.querySelector("#shareBtn").onclick=async()=>{
     const text=`《筆下的你》｜我的文學座標是${nameEl.textContent}。`;
     try{await navigator.clipboard.writeText(text);document.querySelector("#shareStatus").textContent="結果文字已複製，可以貼到社群或訊息裡。";}
